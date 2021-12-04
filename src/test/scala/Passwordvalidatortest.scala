@@ -23,7 +23,7 @@ class Passwordvalidatortest extends AnyFunSuite {
 
   }
   test("check if lowercase password is valid or not"){
-    val inputpassword = "atishashaurya2865#"
+    val inputpassword = "atishaa2865#"
     val expectedoutput = false
     assert(passcheck.isValidpassword(inputpassword) == expectedoutput)
 
@@ -35,13 +35,13 @@ class Passwordvalidatortest extends AnyFunSuite {
 
   }
   test("check entered password is valid or not without special character"){
-    val inputpassword = "Atishashaurya2865"
+    val inputpassword = "Atishas2865"
     val expectedoutput = false
     assert(passcheck.isValidpassword(inputpassword) == expectedoutput)
 
   }
   test("check if uppercase password is valid or not"){
-    val inputpassword = "ATISHASHAURYA2865#"
+    val inputpassword = "ATISHA2865#"
     val expectedoutput = false
     assert(passcheck.isValidpassword(inputpassword) == expectedoutput)
 
@@ -57,8 +57,13 @@ class Passwordvalidatortest extends AnyFunSuite {
     val inputpassword = "2865567#"
     val expectedoutput = false
     assert(passcheck.isValidpassword(inputpassword) == expectedoutput)
-  }
 
+  }
+  test("check if password having space") {
+    val inputpassword = "At isha2865@"
+    val expectedoutput = false
+    assert(passcheck.isValidpassword(inputpassword) == expectedoutput)
+  }
 }
 
 
